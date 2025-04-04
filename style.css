@@ -2,16 +2,28 @@
 
 @theme {
    --font-Roboto: "Roboto", sans-serif;
+   --btn-color-one: #a4bc46;
+   --btn-color-two: #85a019;
 }
 
 @layer base {
-   h1 {
-      /* @apply text-3xl font-bold text-gray-800; */
+   header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
    }
 }
 
 @layer components {
+   /* .nav_menu ul {
+      display: flex;
+      flex-direction: row;
+   } */
+
    .btn {
-      @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+      @apply rounded-lg uppercase font-semibold  py-4.5 px-8 text-[1.25rem]  hover:border-black border-2 transition-all  ease-in;
+   }
+   .btn-primary {
+      @apply bg-gradient-to-r from-[#a4bc46] to-[#85a019] text-white;
    }
 }
